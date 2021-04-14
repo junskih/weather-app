@@ -150,12 +150,13 @@ header {
   grid-auto-flow: row dense;
   grid-template-columns: repeat(4, max-content);
   grid-template-rows: 1fr 1fr;
-  gap: 1em 3em;
+  gap: 1em 1em;
   font-size: 0.8em;
 }
 
 .info-pair {
-  width: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
 .info-title {
@@ -228,7 +229,7 @@ td {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
 
   :root {
     --side-padding: 5vw;
@@ -236,10 +237,6 @@ td {
 
   .wrapper {
     height: auto;
-  }
-
-  .search-input {
-    width: 12em;
   }
 
   .upper-container {
@@ -251,6 +248,10 @@ td {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
+
+  .info-pair {
+    font-size: 1.25em;
+  }
 }
 
 @media (max-width: 850px) {
@@ -260,5 +261,11 @@ td {
 
   td > img {
     width: 3em;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-input {
+    width: 12em;
   }
 }
