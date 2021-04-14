@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0 minimum-scale=1'>
+    <title>Weather app</title>
+    <link rel='stylesheet' href='style.css'>
+  </head>
+  <body>
+    <div class='wrapper'>
+      <header>
+        <div class='search-bar'>
+          <form class='search-form' action='#'>
+            <input type='text' class='search-input' placeholder='Search city'>
+            <input type='submit' class='search-button' value='Search'>
+          </form>
+        </div>
+
+        <div class='radio-container'>
+          <input type='radio' class='unit-radio' name='unit' id='kelvin' value='standard' checked>
+          <label class='unit-label' for='kelvin'>°K</label>
+  
+          <input type='radio' class='unit-radio' name='unit' id='celsius' value='metric'>
+          <label class='unit-label' for='celsius'>°C</label>
+  
+          <input type='radio' class='unit-radio' name='unit' id='fahrenheit' value='imperial'>
+          <label class='unit-label' for='fahrenheit'>°F</label>
+        </div>
+      </header>
+
+      <section class='upper-container'>
+        <div class='main-info'>
+          <h1 class='location'></h1>
+          <h2 class='temperature'></h2>
+          <h3 class='description'></h3>
+          <img class='weather-img' src='' alt=''>
+        </div>
+
+        <div class='additional-info'></div>
+        <template class='info-pair-template'>
+          <div class='info-pair'>
+            <p class='info-title'></p>
+            <p class='info-content'></p>
+          </div>
+        </template>
+
+        <div class='hourly-weather'>
+          <h2 class='section-header'>Weather for the next 24 hours</h2>
+
+          <div class='hourly-info-container'></div>
+          <template class='hourly-info-template'>
+            <div class='hourly-info'>
+              <h4 class='hourly-time'></h4>
+              <img class='hourly-img' src='' alt=''>
+              <p class='hourly-temperature'></p>
+            </div>
+          </template>
+        </div>
+      </section>
+    </div>
+
+    <div class='wrapper'>
+      <section class='lower-container'>
+        <h2 class='section-header'>Weather for the next week</h2>
+        <table class='daily-info-table'>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th></th>
+              <th>Temperature</th>
+              <th>Chance of rain</th>
+              <th>Humidity</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </div>
+
+    <script src='script.js'></script>
+  </body>
+</html>
